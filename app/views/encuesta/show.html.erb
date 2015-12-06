@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Encuesta:</strong>
+  <%= @encuestum.Encuesta_id %>
+</p>
+
+<p>
+  <strong>Encuesta estado:</strong>
+  <%= @encuestum.Encuesta_estado %>
+</p>
+
+<p>
+  <strong>Encuesta nombre:</strong>
+  <%= @encuestum.Encuesta_nombre %>
+</p>
+
+<p>
+  <strong>Encuesta descripcion:</strong>
+  <%= @encuestum.Encuesta_descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_encuestum_path(@encuestum) %> |
+<%= link_to 'Back', encuesta_path %>

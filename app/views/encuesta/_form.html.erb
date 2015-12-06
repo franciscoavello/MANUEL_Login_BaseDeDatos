@@ -1,0 +1,33 @@
+<%= form_for(@encuestum) do |f| %>
+  <% if @encuestum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@encuestum.errors.count, "error") %> prohibited this encuestum from being saved:</h2>
+
+      <ul>
+      <% @encuestum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Encuesta_id %><br>
+    <%= f.number_field :Encuesta_id %>
+  </div>
+  <div class="field">
+    <%= f.label :Encuesta_estado %><br>
+    <%= f.check_box :Encuesta_estado %>
+  </div>
+  <div class="field">
+    <%= f.label :Encuesta_nombre %><br>
+    <%= f.text_field :Encuesta_nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :Encuesta_descripcion %><br>
+    <%= f.text_area :Encuesta_descripcion %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
